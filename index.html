@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML 5 Boilerplate</title>
+  <style>
+    .bulb-card {
+      width: 800px;
+      border: 1px solid gray;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .bulb-img {
+      height: 500px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .btn-add-card {
+      display: block;
+      margin: 30px auto;
+      font-size: 25px;
+      padding: 5px 30px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bulb-card">
+    <img src="bulb-off.png" class="bulb-img" id="bulb-img" />
+  </div>
+
+  <button type="button" class="btn-add-card" onclick="togglebulb()">
+    Toggle Bulb
+  </button>
+
+  <script>
+    const bulbElement = document.getElementById('bulb-img');
+    let state = false;
+
+    function togglebulb() {
+      if (state === false) {
+        bulbElement.src = "bulb-on.png"; // Corrected the image filename
+        state = true;
+      } else {
+        bulbElement.src = "bulb-off.png";
+        state = false;
+      }
+    }
+  </script>
+</body>
+</html>
